@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 
+import React, { useState } from 'react'
 export default function Compteur(props) {
     const [compteur, setCompteur]  = useState(0)
     console.log(compteur)
