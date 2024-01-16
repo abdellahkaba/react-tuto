@@ -36,23 +36,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-class App2 extends React.Component {
-  render() {
-    return <>
-    <h1>Mon premier composant avec une classe !</h1>
-  </>
-  }
-}*/
