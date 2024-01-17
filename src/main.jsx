@@ -2,31 +2,26 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
-import Home from './components/forms/Home'
-import About from './components/forms/About'
-import UserPorfile from './components/forms/UserPorfile'
+
+import PageError from './components/PageError'
+import App2 from './App2'
+import App3 from './App3'
 
 const route = createBrowserRouter ([
   {
     path: "/",
-    element: <App />
+    element: <App />,
+    errorElement: <PageError />
   },
   {
-    path: "/home",
-    element: <Home />
+    path: "/app2",
+    element: <App2 />,
   },
   {
-    path: "/about",
-    element:  <About />
-  },
-  {
-    path: "/user/:username",
-    element: <UserPorfile />
-  },
-  
-  {
-    path: "/redirect"
+    path: "/app3",
+    element: <App3 />,
   }
+ 
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

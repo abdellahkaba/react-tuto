@@ -1,25 +1,18 @@
 import { Link, Route } from "react-router-dom";
+import Input from "./components/forms/input";
+import { useState } from "react";
 
 export default function App() {
+const [message,setMessage] = useState('')
+const handleClick = () => {
+    setMessage(message)
+    alert("Message envoyé")
+}
+ 
   return (
     <div>
-        <nav>
-          <ul>
-            <li>
-              <Link  to="/home">Home</Link>
-            </li>
-            <li>
-            <Link  to="/about">A propos</Link>
-            </li>
-            <li>
-              <Link  to="/user/:Kaba">Mon profil</Link>
-            </li>
-           
-            <li>
-              <Link  to="/">Redirction</Link>
-            </li>
-          </ul>
-        </nav>
+        <Input value={message} onChange={e => setMessage(e.target.value)} />
+        <button onClick={handleClick}>Send</button>
     </div>
   )
 }
